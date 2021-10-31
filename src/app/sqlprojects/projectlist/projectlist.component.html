@@ -1,0 +1,86 @@
+
+<h1 style="text-align: center;text-shadow: azure; font-size:60px">PROJECTS</h1>
+<hr>
+<br>
+<div class="row">
+    <div id="r1" class="col-md-4" style="border: thick solid grey">
+    
+   
+ <hr>
+ <h1 >Projects List</h1>
+ 
+ <br>
+<table class="table table-hover" >
+    <tr>
+        <th>Project Name</th>
+        <th>Action</th>
+        <th>Action</th>
+        </tr>
+    
+    <tr *ngFor="let proj of projects">
+      
+        <td><a [routerLink]="['/api/v1/data/sql', proj.name]">{{proj.name}}</a></td>
+        <td><button type="button" class="btn btn-primary"  (click)="onCreate(proj.name)">Mask</button></td>
+        <td><button class="btn btn-primary" (click)="unmask(proj.name)">UnMask</button></td>
+    </tr>
+</table>
+</div>
+<div id="r2" class="col-md-2" style="border: thick solid grey">
+    <form #myForm1="ngForm" (ngSubmit)="onSubmit1(myForm1.value)" autocomplete="off">
+        <div class="form-group">
+            <label>PROJECT NAME</label>
+            <input name="projectname" class="form-control" id="projectName" required ngModel>
+        </div>
+        <div class="form-group">
+            <label>INSTANCE NAME</label>
+            <input name="instancename" class="form-control" id="instanceName" required ngModel>
+        </div>
+        <div class="form-group">
+            <label>USERNAME</label>
+            <input name="username" class="form-control" id="userName" required ngModel>
+        </div>
+        <div class="form-group">
+            <label>PASSWORD</label>
+            <input name="password" class="form-control" id="password" required ngModel>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success" >ADD SQL Project </button>
+    
+        </div>
+    </form>
+    
+    
+</div>
+<div id="r2" class="col-md-2" style="border: thick solid grey">
+    <form #myForm2="ngForm" (ngSubmit)="onSubmit2(myForm2.value)" autocomplete="off">
+        <div class="form-group">
+            <label>PROJECT NAME</label>
+            <input name="projectname" class="form-control" id="projectName" required ngModel>
+        </div>
+        <div class="form-group">
+            <label>SERVER NAME</label>
+            <input name="servername" class="form-control" id="instanceName" required ngModel>
+        </div>
+        <div class="form-group">
+            <label>PORT</label>
+            <input name="port" class="form-control" id="userName" required ngModel>
+        </div>
+        <div class="form-group">
+            <label>USERNAME</label>
+            <input name="username" class="form-control" id="password" required ngModel>
+        </div>
+        <div class="form-group">
+            <label>PASSWORD</label>
+            <input name="password" class="form-control" id="password" required ngModel>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success" >ADD MYSQL Project </button>
+    
+        </div>
+    </form>
+    
+    
+</div>
+</div>
+
+

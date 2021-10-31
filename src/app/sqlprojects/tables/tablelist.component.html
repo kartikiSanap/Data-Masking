@@ -1,0 +1,58 @@
+
+<div class="row">
+   
+    <div id="r2" class="col-md-5" style="border: thick solid grey">
+        <hr>
+        <h1>Project Name: {{this.proj_name}}</h1>
+        <hr>
+       
+<br>
+<table class="table table-hover" >
+    <tr>
+        <th>Table Name</th>
+        <th>Action</th>
+        <th>Action</th>
+    </tr>
+  
+    <tr  *ngFor="let table of tables" >
+        
+        <td [hidden]="fun4(table.addingstatus)"><a [routerLink]="['/api/v1/data/sql',  this.proj_name,  table.tablename ]">{{table.tablename}}</a></td>
+        <td [hidden]="fun4(table.addingstatus)"><button class="btn btn-primary"  (click)="onCreate(this.proj_name,table.tablename)">Mask</button></td>
+        <td [hidden]="fun4(table.addingstatus)"><button class="btn btn-primary"  (click)="unmask(this.proj_name,table.tablename)">UnMask</button></td>
+
+    </tr>
+</table>
+</div>
+<div id="r1" class="col-md-3" style="border: thick solid grey">
+    <hr>
+    <h1>Add Table </h1>
+    <hr>
+    <h4>Select a table to be added:</h4>
+    <br>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+      <tr>
+          <td>
+           
+            
+                    
+            <select  name="selectedtable" #myDropDownList class="form-control select" ngModel>
+                <option hidden value="" disabled selected>Select a Table</option>
+          <option  *ngFor="let table of tables" [hidden]="fun3(table.addingstatus)"  [ngValue]="table.tablename">{{table.tablename}} </option>  
+    </select>
+    </td>
+   <td>
+       &nbsp;&nbsp;&nbsp;<button type="submit" value="Submit" class="btn-primary">Submit</button>
+   </td>
+                
+</tr>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+   <button type="button" class="btn-primary" (click)="addalltables()">Add All Tables</button>
+<br>
+<br>
+</div>

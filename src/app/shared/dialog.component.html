@@ -1,0 +1,56 @@
+
+
+    <div id="container" class="container" style="border: thin solid grey">
+    <h3>Choose a Method for Masking:</h3>
+    <br>
+    <form #myForm="ngForm"  (ngSubmit)="onSubmit(myForm.value)">
+
+        <div class="custom-control custom-radio">
+           <input id="method1" type="radio" class="custom-control-input" value="method1" name="Method" ngModel>
+           <label class="custom-control-label" for="method1">Method 1</label>
+        </div>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <div class="custom-control custom-radio">
+           <input id="method2" type="radio" class="custom-control-input" value="method2" name="Method" ngModel>
+           <label class="custom-control-label" for="method2">Method 2</label>
+        </div>
+        <br>
+        <div class="custom-control custom-radio">
+         <input id="method3" type="radio" class="custom-control-input"  value="method3"name="Method" ngModel>
+         <label class="custom-control-label" for="method3">Method 3</label>
+        </div>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <div class="custom-control custom-radio">
+         <input id="method4" type="radio" class="custom-control-input" value="method4" name="Method" ngModel>
+         <label class="custom-control-label" for="method4">Method 4</label>
+      </div>
+      <br>
+      <div class="custom-control custom-radio">
+         <input id="method5" type="radio" class="custom-control-input" value="method5" name="Method" ngModel>
+         <label class="custom-control-label" for="method5">Method 5</label>
+      </div>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <div class="custom-control custom-radio">
+         <input id="method6" type="radio" class="custom-control-input" value="method6" name="Method" ngModel>
+         <label class="custom-control-label" for="method6">Method 6</label>
+      </div>
+      <br>
+      <div class="custom-control custom-radio">
+         <input id="method7" type="radio" class="custom-control-input" value="method7" name="Method" ngModel>
+         <label class="custom-control-label" for="method3">Method 7</label>
+      </div>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <div class="custom-control custom-radio">
+         <input id="method8" type="radio" class="custom-control-input" value="method8" name="Method" ngModel>
+         <label class="custom-control-label" for="method8">Method 8</label>
+      </div>
+      <br>
+      <div>
+         <button type="submit" class="btn btn-danger" value="submit">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <button type="button" class="btn btn-primary" (click)="Noclick()">Close</button>
+      </div>
+       
+     </form>
+     <br>
+     </div>
+

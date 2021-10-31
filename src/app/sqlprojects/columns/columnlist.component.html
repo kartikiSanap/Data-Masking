@@ -1,0 +1,63 @@
+
+
+<div class="row">
+
+    <div id="r2" class="col-md-5" style="border: thick solid grey">
+        <hr>
+        <h1>Project Name: &nbsp;{{this.proj_name}}</h1>
+        <h1>Table Name:&nbsp; {{this.table_name}}</h1>
+        <br>
+<table class="table table-hover" >
+    <tr>
+        <th>Column Name</th>
+        <th>Column Type</th>
+        <th>Action</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let column of columns">
+      
+        <td [hidden]="fun4(column.addingstatus)">{{column.name}}</td>
+        <td [hidden]="fun4(column.addingstatus)">  {{column.columntype}}</td>
+        <td [hidden]="fun4(column.addingstatus)"><button class="btn btn-primary" [disabled]="fun1(column.status)" (click)="onCreate(this.proj_name,this.table_name,column.name)">Mask</button></td>
+        <td [hidden]="fun4(column.addingstatus)"><button class="btn btn-primary" [disabled]="fun2(column.status)" (click)="unmask(this.proj_name,this.table_name,column.name)">UnMask</button></td>
+
+    </tr>
+</table>
+</div>
+<div id="r1" class="col-md-3" style="border: thick solid grey">
+    <hr>
+    <h1>Add Column </h1>
+    <hr>
+    <h4>Select a column to be added:</h4>
+    <br>
+    <form #myForm="ngForm" class="main-form" (ngSubmit)="onSubmit(myForm.value)">
+      <tr>
+          <td>
+           
+            
+                    
+            <select   name="selectedcolumn" #myDropDownList class="form-control select"ngModel>
+                <option hidden value="" disabled selected>Select a Column</option>
+          <option  *ngFor="let column of columns" [hidden]="fun3(column.addingstatus)"  [ngValue]="column.name">{{column.name}} </option>  
+    </select>
+    </td>
+   <td>
+       &nbsp;&nbsp;&nbsp;<button type="submit" value="submit"class="btn-primary">Submit</button>
+   </td>
+                
+</tr>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+   <button type="button" class="btn-primary" (click)="addallcolumns()">Add All Columns</button>
+<br>
+<br>
+</div>
+
+
+

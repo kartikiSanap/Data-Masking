@@ -1,3 +1,17 @@
+This is a webapp utility developed for masking and unmasking of the sensitive data present in database entities(tables,columns) already present in existing database management system. Users of the system can choose to select the database ,tables,columns which they want to mask/unmask by selectig them for adding in the primary db and then becomes available for masking and unmasking operation.
+
+Technologies Used -
+Frontend - Angular
+Backend - Springboot,Java,JDBC,SQL/MySQL Databases. 
+
+
+
+
+
+
+
+
+
 # Ngmasking
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.

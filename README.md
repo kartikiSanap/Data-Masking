@@ -1,4 +1,4 @@
-This is a webapp utility developed for masking and unmasking of the sensitive data present in database entities(tables,columns) already present in existing database management system. Users of the system can choose to select the database ,tables,columns which they want to mask/unmask by selectig them for adding in the primary db and then becomes available for masking and unmasking operation.
+This is a webapp utility developed for masking and unmasking of the sensitive data present in database entities(tables,columns) already present in existing database management system. Users of the system can choose to select the database ,tables,columns from UI which they want to mask/unmask by selecting them for adding in a primary db and then the databases,tables,columns which are added in primary db becomes available for masking and unmasking operation.
 
 Technologies Used -
 Frontend - Angular

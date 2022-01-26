@@ -80,6 +80,7 @@ public class ServiceController {
 	public void AddProjectSql(@PathVariable("project") String project,@PathVariable("instance_name") String instance_name) throws Exception
 	{
 	   System.out.println(project+instance_name);
+	   System.out.println("adding project");
 		try {
 		boolean b = new AddProjects().AddNewProjectSql( datasource,  project,  "sql", instance_name, "sa","kartiki@13");
 		// datasource,  project,  "mysql",LAPTOP-214UVIPL,"sa","976431"

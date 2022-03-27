@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+//class created for displaying project details 
 public class Project {
 	int id;
 	String name;

@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+//Class created for displaying column data after instantiating the class.
 public class Column {
 	
 	String name;
